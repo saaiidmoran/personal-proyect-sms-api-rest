@@ -98,12 +98,12 @@ public class Cliente implements Serializable {
 		this.domicilio = domicilio;
 	}
 
-	public List<Detalleventa> getDetalleventaCollection() {
+	public List<Detalleventa> getDetallesVenta() {
 		return detallesVenta;
 	}
 
-	public void setDetalleventaCollection(List<Detalleventa> detalleventaCollection) {
-		this.detallesVenta = detalleventaCollection;
+	public void setDetallesVenta(List<Detalleventa> detallesVenta) {
+		this.detallesVenta = detallesVenta;
 	}
     
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -42,7 +43,7 @@ public class RestVentaController {
 		return vds.insert(v, idproducto, iddetalleventa);
 	}
 	
-	@PostMapping(value = "/{idventa}/{idproducto}/{iddetalleventa}")
+	@PutMapping(value = "/{idventa}/{idproducto}/{iddetalleventa}")
 	public Venta update(
 							@RequestBody Venta v,
 							@PathVariable("idventa") Integer idventa,

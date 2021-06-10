@@ -107,7 +107,6 @@ public class Producto implements Serializable {
 		this.fecharegistro = fecharegistro;
 	}
 
-
 	public List<Venta> getVentas() {
 		return ventas;
 	}
@@ -115,7 +114,7 @@ public class Producto implements Serializable {
 	public void setVentas(List<Venta> ventas) {
 		this.ventas = ventas;
 	}
-
+	
 	public Estatusproducto getIdestatusproducto() {
 		return idestatusproducto;
 	}

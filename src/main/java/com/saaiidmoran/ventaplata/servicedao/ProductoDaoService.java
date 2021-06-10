@@ -37,7 +37,7 @@ public class ProductoDaoService {
 		return pRepo.findByPreciovent(preciovent);
 	}
 	
-	public Producto selectByFecharegistro(String fecharegistro) {
+	public List<Producto> selectByFecharegistro(String fecharegistro) {
 		return pRepo.findByFecharegistro(fecharegistro);
 	}
 		

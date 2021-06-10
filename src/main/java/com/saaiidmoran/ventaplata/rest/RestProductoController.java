@@ -40,7 +40,7 @@ public class RestProductoController {
 	}
 	
 	@GetMapping(value = "/buscarPorFecharegistro/{fecha}")
-	public Producto selectByFecharegistro(@PathVariable("fecha") String fecha) {
+	public List<Producto> selectByFecharegistro(@PathVariable("fecha") String fecha) {
 		return pds.selectByFecharegistro(fecha);
 	}
 	

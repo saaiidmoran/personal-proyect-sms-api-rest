@@ -1,7 +1,8 @@
 package com.saaiidmoran.ventaplata.model;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -41,7 +42,7 @@ public class Detalleventa implements Serializable {
     
     @JsonManagedReference(value = "detalleventa-venta")
     @OneToMany(fetch = FetchType.EAGER, targetEntity = Venta.class, mappedBy = "iddetalleventa")
-    private Collection<Venta> ventas;
+    private List<Venta> ventas;
     
     @JsonBackReference(value = "cliente-detalleventa")    
     @ManyToOne(optional = false)
@@ -109,11 +110,11 @@ public class Detalleventa implements Serializable {
 		this.abono = abono;
 	}
 
-	public Collection<Venta> getVentas() {
+	public List<Venta> getVentas() {
 		return ventas;
 	}
 
-	public void setVentas(Collection<Venta> ventas) {
+	public void setVentas(List<Venta> ventas) {
 		this.ventas = ventas;
 	}
 
